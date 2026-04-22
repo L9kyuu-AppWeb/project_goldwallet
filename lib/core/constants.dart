@@ -7,6 +7,10 @@ class AppConstants {
   static const String tableWallets = 'wallets';
   static const String tableCategories = 'categories';
   static const String tableTransactions = 'transactions';
+  
+  // API Config (MySQL via HTTP)
+  static const String apiBaseUrl = 'https://gold-wallet.buildapp.my.id'; // Sesuaikan dengan hosting Anda nanti
+  // static const String apiBaseUrl = 'https://api_gold_wallet.test'; // Sesuaikan dengan hosting Anda nanti
 }
 
 enum WalletType { cash, bank, eWallet, gold }

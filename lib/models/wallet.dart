@@ -54,7 +54,9 @@ class Wallet {
       name: map['name'] as String,
       type: WalletTypeExt.fromString(map['type'] as String),
       balance: (map['balance'] as num?)?.toDouble() ?? 0.0,
-      isMain: (map['is_main'] as int?) == 1,
+      isMain: map['is_main'] is bool 
+          ? map['is_main'] as bool 
+          : (map['is_main'] as int?) == 1,
       createdAt: DateTime.tryParse(map['created_at'] as String? ?? '') ?? DateTime.now(),
     );
   }
